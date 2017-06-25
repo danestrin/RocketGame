@@ -11,7 +11,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class AssetLoader {
 
     public static Texture texture;
-    public static TextureRegion ship, bg, fuel;
+    public static TextureRegion ship, bg, fuel, title;
     public static BitmapFont font;
 
     public static void load() {
@@ -26,7 +26,11 @@ public class AssetLoader {
         fuel = new TextureRegion(texture, 240, 24, 8, 10);
         fuel.flip(false, true);
 
+        title = new TextureRegion(texture, 240, 34, 190, 49);
+        title.flip(false, true);
+
         font = new BitmapFont(Gdx.files.internal("data/font.fnt"), true);
+
     }
 
     public static void dispose() {

@@ -20,7 +20,7 @@ public class GameWorld {
     private double score_rate = 0.5;
     private double timer;
 
-    private GameState currentState;
+    private GameState currentState = GameState.TITLE;
 
     public enum GameState {
         TITLE, INGAME, GAMEOVER
@@ -49,6 +49,24 @@ public class GameWorld {
 
     public void update(float delta) {
 
+        switch(currentState) {
+            case TITLE:
+                updateTitle(delta);
+                break;
+
+            case INGAME:
+            default:
+                updateInGame(delta);
+                break;
+        }
+    }
+
+    private void updateTitle(float delta) {
+
+    }
+
+    public void updateInGame(float delta) {
+
         // Call the update functions for the gameobjects
         ship.update(delta);
         fuel.update(delta);
@@ -61,6 +79,11 @@ public class GameWorld {
         // Update score (it slowly increases the longer you play
         if (ship.getFuel() > 0) {
             updateScore(delta);
+        }
+
+        // The game is over when the ship runs out of fuel
+        if (ship.getFuel() == 0) {
+            currentState = GameState.GAMEOVER;
         }
 
     }
@@ -84,5 +107,36 @@ public class GameWorld {
 
     public int getScore() {
         return this.score;
+    }
+
+    public boolean isTitle() {
+        return currentState == GameState.TITLE;
+    }
+
+    public void start() {
+        currentState = GameState.INGAME;
+    }
+
+    public void restart() {
+        //after GameOver, game goes immediately back to InGame following user input
+        currentState = GameState.INGAME;
+
+        //reset score to 0
+        timer = 0;
+        score = 0;
+
+        //call a method to reset the Ship
+        ship.onRestart(width/2-12, height/2);
+
+        //reset the fuel, this is exactly the same as resetting it after a collision
+        fuel.resetAfterCollision(width, height);
+    }
+
+    public boolean isGameOver() {
+        return currentState == GameState.GAMEOVER;
+    }
+
+    public boolean isInGame() {
+        return currentState == GameState.INGAME;
     }
 }

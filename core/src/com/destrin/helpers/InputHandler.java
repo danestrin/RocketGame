@@ -2,16 +2,19 @@ package com.destrin.helpers;
 
 import com.badlogic.gdx.InputProcessor;
 import com.destrin.gameobjects.Ship;
+import com.destrin.gameworld.GameWorld;
 
 /**
  * Created by danestrin on 2017-05-24.
  */
 public class InputHandler implements InputProcessor {
 
+    private GameWorld world;
     private Ship ship;
 
-    public InputHandler(Ship ship) {
-        this.ship = ship;
+    public InputHandler(GameWorld world) {
+        this.world = world;
+        this.ship = world.getShip();
     }
 
     /**
@@ -58,7 +61,18 @@ public class InputHandler implements InputProcessor {
      */
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
-        ship.onClick();
+
+        if (world.isInGame()) {
+            ship.onClick();
+        }
+
+        if (world.isTitle()) {
+            world.start();
+        }
+
+        if (world.isGameOver()) {
+            world.restart();
+        }
         return true;
     }
 
@@ -72,7 +86,9 @@ public class InputHandler implements InputProcessor {
      */
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-        ship.onRelease();
+        if (world.isInGame()) {
+            ship.onRelease();
+        }
         return true;
     }
 

@@ -135,7 +135,7 @@ public class Ship {
         timer += delta;
 
         if (fuel > 0 && timer >= 0.1) {
-            fuel -= fuel_per_second;
+            fuel -= fuel_per_second*delta;
             timer -= 0.1;
         }
     }
@@ -160,5 +160,19 @@ public class Ship {
         if (fuel > 100) {
             fuel = 100;
         }
+    }
+
+    public void onRestart(int x, int y) {
+        this.x = x;
+        this.y = y;
+
+        this.fuel = 100;
+        this.rotation = 0;
+        this.angle = 90;
+        this.isRotating = false;
+
+        this.speed = max_speed;
+
+        timer = 0;
     }
 }

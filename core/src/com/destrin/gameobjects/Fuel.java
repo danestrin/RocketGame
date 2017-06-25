@@ -89,5 +89,7 @@ public class Fuel {
         x = randX;
         y = randY;
         capacity = start_cap;
+
+        timer = 0;
     }
 }
