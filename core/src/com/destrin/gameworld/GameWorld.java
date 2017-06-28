@@ -50,7 +50,7 @@ public class GameWorld {
         this.score = 0;
 
         //this button will be needed in the title screen
-        this.startButton = new Button(width/2 - AssetLoader.startButtonUp.getRegionWidth()/2, height/2, 67, 12, AssetLoader.startButtonUp, AssetLoader.startButtonDown);
+        this.startButton = new Button(width/2 - AssetLoader.startButtonUp.getRegionWidth()/2, 2*height/3, 67, 12, AssetLoader.startButtonUp, AssetLoader.startButtonDown);
     }
 
     public void update(float delta) {
@@ -90,6 +90,10 @@ public class GameWorld {
         // The game is over when the ship runs out of fuel
         if (ship.getFuel() == 0) {
             currentState = GameState.GAMEOVER;
+
+            if (score > AssetLoader.getHiScore()) {
+                AssetLoader.setHiScore(score);
+            }
         }
 
     }

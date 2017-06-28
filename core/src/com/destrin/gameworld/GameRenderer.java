@@ -67,7 +67,7 @@ public class GameRenderer {
             batch.draw(AssetLoader.title, width/2-190/4, height/5, 190/2, 49/2);
 
             AssetLoader.font.getData().setScale(0.0625f);
-            //AssetLoader.font.draw(batch, "HOLD THE SCREEN TO ROTATE THE SHIP! \n COLLECT FUEL BEFORE YOU RUN OUT!", 8, 2*height/5, width-8, Align.center, true);
+            AssetLoader.font.draw(batch, "HOLD THE SCREEN TO ROTATE THE SHIP! \n COLLECT FUEL BEFORE YOU RUN OUT!", 8, 2*height/5, width-8, Align.center, true);
             AssetLoader.font.draw(batch, "2017 DAN ESTRIN", 0, height-8, width, Align.center, true);
 
             startButton.draw(batch);
@@ -83,7 +83,7 @@ public class GameRenderer {
 
             AssetLoader.font.getData().setScale(0.0625f);
             AssetLoader.font.setColor(255, 255, 255, 255);
-            AssetLoader.font.draw(batch, "SCORE: " + world.getScore() + "\n HI-SCORE:" + "\n \n TAP TO RESTART!", 0, 2*height/5, width, Align.center, true);
+            AssetLoader.font.draw(batch, "SCORE: " + world.getScore() + "\n HI-SCORE:" + AssetLoader.getHiScore() + "\n \n TAP TO RESTART!", 0, 2*height/5, width, Align.center, true);
             batch.end();
         } else if (world.isInGame()) {
             batch.begin();
@@ -93,9 +93,9 @@ public class GameRenderer {
 
             AssetLoader.font.getData().setScale(0.0625f);
 
-            AssetLoader.font.draw(batch, "FUEL: " + ship.getFuel() + "%", 0, 8, width-8, Align.right, true);
+            AssetLoader.font.draw(batch, "FUEL\n" + ship.getFuel() + "%", 0, 8, width-8, Align.right, true);
 
-            AssetLoader.font.draw(batch, "SCORE: " + world.getScore(), 8, 8, width, Align.left, true);
+            AssetLoader.font.draw(batch, "SCORE\n" + world.getScore(), 8, 8, width, Align.left, true);
             batch.end();
 
 

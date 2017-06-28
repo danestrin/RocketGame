@@ -1,6 +1,7 @@
 package com.destrin.helpers;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Preferences;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -15,6 +16,7 @@ public class AssetLoader {
     public static TextureRegion ship1, ship2, bg, fuel, title, startButtonUp, startButtonDown;
     public static Animation shipAnimation;
     public static BitmapFont font;
+    public static Preferences prefs;
 
     public static void load() {
         texture = new Texture(Gdx.files.internal("data/texture.png"));
@@ -45,11 +47,26 @@ public class AssetLoader {
 
         font = new BitmapFont(Gdx.files.internal("data/font.fnt"), true);
 
+        prefs = Gdx.app.getPreferences("Rocket");
+
+        if (!prefs.contains("hiScore")) {
+            prefs.putInteger("hiScore", 0);
+        }
+
     }
 
     public static void dispose() {
         texture.dispose();
         font.dispose();
+    }
+
+    public static void setHiScore(int val) {
+        prefs.putInteger("hiScore", val);
+        prefs.flush();
+    }
+
+    public static int getHiScore() {
+        return prefs.getInteger("hiScore");
     }
 
 }
