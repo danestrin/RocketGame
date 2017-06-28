@@ -40,7 +40,7 @@ public class Ship {
 
         this.speed = max_speed;
 
-        this.boundingPoly = new Polygon(new float[]{this.width/2, 0, this.width, this.height, 0, this.height});
+        this.boundingPoly = new Polygon(new float[]{this.width/2, 0, this.width, this.height-6, 0, this.height-6});
     }
 
     public void update(float delta) {

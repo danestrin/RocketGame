@@ -2,6 +2,8 @@ package com.destrin.gameworld;
 
 import com.destrin.gameobjects.Fuel;
 import com.destrin.gameobjects.Ship;
+import com.destrin.helpers.AssetLoader;
+import com.destrin.ui.Button;
 
 import java.util.Random;
 
@@ -20,6 +22,8 @@ public class GameWorld {
     private double score_rate = 0.5;
     private double timer;
 
+    private Button startButton;
+
     private GameState currentState = GameState.TITLE;
 
     public enum GameState {
@@ -33,7 +37,7 @@ public class GameWorld {
         this.height = height;
 
         //initialize the ship (player)
-        ship = new Ship(width/2-12, height/2, 18, 24);    //width and height of sprite
+        ship = new Ship(width/2-12, height/2, 18, 30);    //width and height of sprite
 
         //create the ship fuel collectible at a random spot
         Random rand = new Random();
@@ -45,6 +49,8 @@ public class GameWorld {
         //initialize the score at 0
         this.score = 0;
 
+        //this button will be needed in the title screen
+        this.startButton = new Button(width/2 - AssetLoader.startButtonUp.getRegionWidth()/2, height/2, 67, 12, AssetLoader.startButtonUp, AssetLoader.startButtonDown);
     }
 
     public void update(float delta) {
@@ -94,6 +100,10 @@ public class GameWorld {
 
     public Fuel getFuel() {
         return fuel;
+    }
+
+    public Button getStartButton() {
+        return startButton;
     }
 
     public void updateScore(float delta) {

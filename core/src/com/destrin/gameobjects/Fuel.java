@@ -6,6 +6,10 @@ import java.util.Random;
 
 /**
  * Created by danestrin on 2017-06-04.
+ *
+ * This is the Fuel powerup class. It spawns at a random spot on the screen at the start of each game and teleports to a
+ * new random spot upon collision with the Ship (Player). It contains START_VALUE fuel and decays at a rate of DECAY_RATE,
+ * to a minimum value of MIN_VALUE.
  */
 public class Fuel {
 
@@ -15,13 +19,17 @@ public class Fuel {
     private int width;
     private int height;
 
-    private double decay_rate = 0.25;
-    private float start_cap = 20;
-    private float min_value = 5;
+    private double DECAY_RATE= 0.25;
+    private float START_VALUE = 20;
+    private float MIN_VALUE = 5;
     private float capacity;
     private float timer;
 
     private Polygon boundingPoly;
+
+    /*
+    CONSTRUCTOR: initializes the Fuel's x, y, width, and height, as well as its capacity and collision polygon.
+     */
 
     public Fuel(int x, int y, int width, int height) {
 
@@ -31,10 +39,14 @@ public class Fuel {
         this.width = width;
         this.height = height;
 
-        this.capacity = start_cap;
+        this.capacity = START_VALUE;
 
         boundingPoly = new Polygon(new float[]{0, 0, this.width, 0, this.width, this.height, 0, this.height});
     }
+
+    /*
+    UPDATE: runs every frame
+     */
 
     public void update(float delta) {
 
@@ -66,20 +78,32 @@ public class Fuel {
         return this.boundingPoly;
     }
 
+    /*
+    DECAY: The capacity of the fuel decays by 1 based on DECAY_RATE, until it reaches MIN_VALUE.
+     */
     public void decay(float delta) {
 
         timer += delta;
 
-        if (capacity > min_value && timer >= decay_rate) {
+        if (capacity > MIN_VALUE && timer >= DECAY_RATE) {
             capacity -= 1;
 
-            timer -= decay_rate;
+            timer -= DECAY_RATE;
         }
     }
+
+    /*
+    UPDATEPOLYGON: updates the collision polygon of the Fuel so that it matches the Fuel's x and y.
+     */
 
     public void updatePolygon(float delta) {
         boundingPoly.setPosition(x, y);
     }
+
+    /*
+    RESETAFTERCOLLISION: upon collision/collection by the Ship, it is moved to a new, random x and y location and its
+    capacity is reset to START_VALUE.
+     */
 
     public void resetAfterCollision(int width, int height) {
         Random rand = new Random();
@@ -88,7 +112,7 @@ public class Fuel {
 
         x = randX;
         y = randY;
-        capacity = start_cap;
+        capacity = START_VALUE;
 
         timer = 0;
     }

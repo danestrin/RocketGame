@@ -3,6 +3,7 @@ package com.destrin.helpers;
 import com.badlogic.gdx.InputProcessor;
 import com.destrin.gameobjects.Ship;
 import com.destrin.gameworld.GameWorld;
+import com.destrin.ui.Button;
 
 /**
  * Created by danestrin on 2017-05-24.
@@ -12,9 +13,19 @@ public class InputHandler implements InputProcessor {
     private GameWorld world;
     private Ship ship;
 
-    public InputHandler(GameWorld world) {
+    private Button startButton;
+
+    private float scaleFactorX, scaleFactorY;
+
+    public InputHandler(GameWorld world, float scaleX, float scaleY) {
         this.world = world;
         this.ship = world.getShip();
+
+        this.startButton = world.getStartButton();
+
+        this.scaleFactorX = scaleX;
+        this.scaleFactorY = scaleY;
+
     }
 
     /**
@@ -62,12 +73,15 @@ public class InputHandler implements InputProcessor {
     @Override
     public boolean touchDown(int screenX, int screenY, int pointer, int button) {
 
-        if (world.isInGame()) {
-            ship.onClick();
-        }
+        screenX = scaleX(screenX);
+        screenY = scaleY(screenY);
 
         if (world.isTitle()) {
-            world.start();
+            startButton.isTouchDown(screenX, screenY);
+        }
+
+        if (world.isInGame()) {
+            ship.onClick();
         }
 
         if (world.isGameOver()) {
@@ -86,10 +100,24 @@ public class InputHandler implements InputProcessor {
      */
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
-        if (world.isInGame()) {
-            ship.onRelease();
+
+        screenX = scaleX(screenX);
+        screenY = scaleY(screenY);
+
+        if (world.isTitle()) {
+            if (startButton.isReleased(screenX, screenY)) {
+                world.start();
+                return true;
+            }
+
         }
-        return true;
+
+        if(world.isInGame()) {
+            ship.onRelease();
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -125,5 +153,17 @@ public class InputHandler implements InputProcessor {
     @Override
     public boolean scrolled(int amount) {
         return false;
+    }
+
+    public Button getStartButton() {
+        return this.startButton;
+    }
+
+    private int scaleX(int screenX) {
+        return (int) (screenX / scaleFactorX);
+    }
+
+    private int scaleY(int screenY) {
+        return (int) (screenY / scaleFactorY);
     }
 }
