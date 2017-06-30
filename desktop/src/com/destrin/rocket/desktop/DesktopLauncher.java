@@ -10,6 +10,7 @@ public class DesktopLauncher {
         config.title = "Rocket";
         config.width = 320;
         config.height = 480;
+        config.resizable = false;
         new LwjglApplication(new RocketGame(), config);
     }
 }

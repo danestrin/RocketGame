@@ -13,7 +13,7 @@ public class InputHandler implements InputProcessor {
     private GameWorld world;
     private Ship ship;
 
-    private Button startButton;
+    private Button startButton, mmButton, taButton;
 
     private float scaleFactorX, scaleFactorY;
 
@@ -22,6 +22,8 @@ public class InputHandler implements InputProcessor {
         this.ship = world.getShip();
 
         this.startButton = world.getStartButton();
+        this.mmButton = world.getMmButton();
+        this.taButton = world.getTaButton();
 
         this.scaleFactorX = scaleX;
         this.scaleFactorY = scaleY;
@@ -85,7 +87,8 @@ public class InputHandler implements InputProcessor {
         }
 
         if (world.isGameOver()) {
-            world.restart();
+            mmButton.isTouchDown(screenX, screenY);
+            taButton.isTouchDown(screenX, screenY);
         }
         return true;
     }
@@ -115,6 +118,15 @@ public class InputHandler implements InputProcessor {
         if(world.isInGame()) {
             ship.onRelease();
             return true;
+        }
+
+        if (world.isGameOver()) {
+            if (taButton.isReleased(screenX, screenY)) {
+                world.restart();
+            }
+            else if (mmButton.isReleased(screenX, screenY)) {
+                world.returnToTitle();
+            }
         }
 
         return false;

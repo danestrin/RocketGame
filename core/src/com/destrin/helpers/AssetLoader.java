@@ -13,7 +13,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class AssetLoader {
 
     public static Texture texture;
-    public static TextureRegion ship1, ship2, bg, fuel, title, startButtonUp, startButtonDown;
+    public static TextureRegion ship1, ship2, bg, fuel, title, startButtonUp, startButtonDown, taButtonUp, taButtonDown, mmButtonUp, mmButtonDown;
     public static Animation shipAnimation;
     public static BitmapFont font;
     public static Preferences prefs;
@@ -26,6 +26,16 @@ public class AssetLoader {
         startButtonUp.flip(false, true);
         startButtonDown = new TextureRegion(texture, 160, 103, 67, 12);
         startButtonDown.flip(false, true);
+
+        taButtonUp = new TextureRegion(texture, 160, 117, 102, 12);
+        taButtonUp.flip(false, true);
+        taButtonDown = new TextureRegion(texture, 160, 131, 102, 12);
+        taButtonDown.flip(false, true);
+
+        mmButtonUp = new TextureRegion(texture, 160, 145, 95, 12);
+        mmButtonUp.flip(false, true);
+        mmButtonDown = new TextureRegion(texture, 160, 159, 95, 12);
+        mmButtonDown.flip(false, true);
 
         bg = new TextureRegion(texture, 0, 0, 160, 240);
 

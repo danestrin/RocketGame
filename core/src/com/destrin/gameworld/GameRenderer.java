@@ -28,7 +28,7 @@ public class GameRenderer {
     private Ship ship;
     private Fuel fuel;
 
-    private Button startButton;
+    private Button startButton, mmButton, taButton;
 
     public GameRenderer(GameWorld world, int width, int height) {
 
@@ -52,6 +52,8 @@ public class GameRenderer {
         fuel = world.getFuel();
 
         startButton = world.getStartButton();
+        mmButton = world.getMmButton();
+        taButton = world.getTaButton();
     }
 
     private void initAssets() {
@@ -76,14 +78,16 @@ public class GameRenderer {
         }
         else if (world.isGameOver()) {
             batch.begin();
-            batch.draw(AssetLoader.bg, 0, 0);
             AssetLoader.font.getData().setScale(0.125f);
             AssetLoader.font.setColor(255, 0, 0, 255);
             AssetLoader.font.draw(batch, "GAME OVER", 0, height/3, width, Align.center, true);
 
             AssetLoader.font.getData().setScale(0.0625f);
             AssetLoader.font.setColor(255, 255, 255, 255);
-            AssetLoader.font.draw(batch, "SCORE: " + world.getScore() + "\n HI-SCORE:" + AssetLoader.getHiScore() + "\n \n TAP TO RESTART!", 0, 2*height/5, width, Align.center, true);
+            AssetLoader.font.draw(batch, "SCORE: " + world.getScore() + "\n HI-SCORE:" + AssetLoader.getHiScore(), 0, 2*height/5, width, Align.center, true);
+
+            mmButton.draw(batch);
+            taButton.draw(batch);
             batch.end();
         } else if (world.isInGame()) {
             batch.begin();
@@ -109,5 +113,9 @@ public class GameRenderer {
         */
 
         }
+    }
+
+    public OrthographicCamera getCamera() {
+        return this.camera;
     }
 }

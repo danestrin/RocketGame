@@ -22,7 +22,7 @@ public class GameWorld {
     private double score_rate = 0.5;
     private double timer;
 
-    private Button startButton;
+    private Button startButton, mmButton, taButton;
 
     private GameState currentState = GameState.TITLE;
 
@@ -49,8 +49,10 @@ public class GameWorld {
         //initialize the score at 0
         this.score = 0;
 
-        //this button will be needed in the title screen
+        //initialize the UI buttons for the title and gameover screens
         this.startButton = new Button(width/2 - AssetLoader.startButtonUp.getRegionWidth()/2, 2*height/3, 67, 12, AssetLoader.startButtonUp, AssetLoader.startButtonDown);
+        this.taButton = new Button(width/2-AssetLoader.taButtonUp.getRegionWidth()/2, 6*height/10, AssetLoader.taButtonUp.getRegionWidth(), AssetLoader.taButtonUp.getRegionHeight(), AssetLoader.taButtonUp, AssetLoader.taButtonDown);
+        this.mmButton = new Button(width/2-AssetLoader.mmButtonUp.getRegionWidth()/2, 7*height/10, AssetLoader.mmButtonUp.getRegionWidth(), AssetLoader.mmButtonUp.getRegionHeight(), AssetLoader.mmButtonUp, AssetLoader.mmButtonDown);
     }
 
     public void update(float delta) {
@@ -110,6 +112,14 @@ public class GameWorld {
         return startButton;
     }
 
+    public Button getMmButton() {
+        return mmButton;
+    }
+
+    public Button getTaButton() {
+        return taButton;
+    }
+
     public void updateScore(float delta) {
         timer += delta;
 
@@ -131,8 +141,21 @@ public class GameWorld {
         currentState = GameState.INGAME;
     }
 
+    public void returnToTitle() {
+        currentState = GameState.TITLE;
+
+        //reset score to 0
+        timer = 0;
+        score = 0;
+
+        //call a method to reset the Ship
+        ship.onRestart(width/2-12, height/2);
+
+        //reset the fuel, this is exactly the same as resetting it after a collision
+        fuel.resetAfterCollision(width, height);
+    }
+
     public void restart() {
-        //after GameOver, game goes immediately back to InGame following user input
         currentState = GameState.INGAME;
 
         //reset score to 0
