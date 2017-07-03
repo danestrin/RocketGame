@@ -4,6 +4,7 @@ import com.destrin.gameobjects.Fuel;
 import com.destrin.gameobjects.Ship;
 import com.destrin.helpers.AssetLoader;
 import com.destrin.ui.Button;
+import com.destrin.ui.Toggle;
 
 import java.util.Random;
 
@@ -23,6 +24,7 @@ public class GameWorld {
     private double timer;
 
     private Button startButton, mmButton, taButton;
+    private Toggle muteButton;
 
     private GameState currentState = GameState.TITLE;
 
@@ -50,9 +52,10 @@ public class GameWorld {
         this.score = 0;
 
         //initialize the UI buttons for the title and gameover screens
-        this.startButton = new Button(width/2 - AssetLoader.startButtonUp.getRegionWidth()/2, 2*height/3, 67, 12, AssetLoader.startButtonUp, AssetLoader.startButtonDown);
-        this.taButton = new Button(width/2-AssetLoader.taButtonUp.getRegionWidth()/2, 6*height/10, AssetLoader.taButtonUp.getRegionWidth(), AssetLoader.taButtonUp.getRegionHeight(), AssetLoader.taButtonUp, AssetLoader.taButtonDown);
-        this.mmButton = new Button(width/2-AssetLoader.mmButtonUp.getRegionWidth()/2, 7*height/10, AssetLoader.mmButtonUp.getRegionWidth(), AssetLoader.mmButtonUp.getRegionHeight(), AssetLoader.mmButtonUp, AssetLoader.mmButtonDown);
+        this.startButton = new Button(width/2 - AssetLoader.startButtonUp.getRegionWidth()/2, 3*height/5, 67, 12, AssetLoader.startButtonUp, AssetLoader.startButtonDown);
+        this.taButton = new Button(width/2-AssetLoader.taButtonUp.getRegionWidth()/4, 6*height/10, AssetLoader.taButtonUp.getRegionWidth()/2, AssetLoader.taButtonUp.getRegionHeight()/2, AssetLoader.taButtonUp, AssetLoader.taButtonDown);
+        this.mmButton = new Button(width/2-AssetLoader.mmButtonUp.getRegionWidth()/4, 7*height/10, AssetLoader.mmButtonUp.getRegionWidth()/2 + 1, AssetLoader.mmButtonUp.getRegionHeight()/2, AssetLoader.mmButtonUp, AssetLoader.mmButtonDown);
+        this.muteButton = new Toggle(width/2 - AssetLoader.soundOn.getRegionWidth()/4, 7*height/10, 2, AssetLoader.soundOn, AssetLoader.soundOff);
     }
 
     public void update(float delta) {
@@ -81,6 +84,9 @@ public class GameWorld {
 
         // COLLISIONS
         if (ship.collides(fuel)) {
+            if (muteButton.isOn()) {
+                AssetLoader.pickup.play();
+            }
             fuel.resetAfterCollision(width, height);
         }
 
@@ -118,6 +124,10 @@ public class GameWorld {
 
     public Button getTaButton() {
         return taButton;
+    }
+
+    public Toggle getMuteButton() {
+        return muteButton;
     }
 
     public void updateScore(float delta) {

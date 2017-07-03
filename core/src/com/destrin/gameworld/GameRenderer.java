@@ -10,6 +10,7 @@ import com.destrin.gameobjects.Fuel;
 import com.destrin.gameobjects.Ship;
 import com.destrin.helpers.AssetLoader;
 import com.destrin.ui.Button;
+import com.destrin.ui.Toggle;
 
 /**
  * Created by danestrin on 2017-05-24.
@@ -29,6 +30,7 @@ public class GameRenderer {
     private Fuel fuel;
 
     private Button startButton, mmButton, taButton;
+    private Toggle muteButton;
 
     public GameRenderer(GameWorld world, int width, int height) {
 
@@ -54,6 +56,7 @@ public class GameRenderer {
         startButton = world.getStartButton();
         mmButton = world.getMmButton();
         taButton = world.getTaButton();
+        muteButton = world.getMuteButton();
     }
 
     private void initAssets() {
@@ -69,10 +72,12 @@ public class GameRenderer {
             batch.draw(AssetLoader.title, width/2-190/4, height/5, 190/2, 49/2);
 
             AssetLoader.font.getData().setScale(0.0625f);
-            AssetLoader.font.draw(batch, "HOLD THE SCREEN TO ROTATE THE SHIP! \n COLLECT FUEL BEFORE YOU RUN OUT!", 8, 2*height/5, width-8, Align.center, true);
-            AssetLoader.font.draw(batch, "2017 DAN ESTRIN", 0, height-8, width, Align.center, true);
+            AssetLoader.font.draw(batch, "Hold the screen to steer the ship!  \n Collect fuel before you run out!", 8, height/3, width-8, Align.center, true);
+            AssetLoader.font.draw(batch, "2017 Dan Estrin", 0, height-8, width, Align.center, true);
+            AssetLoader.font.draw(batch, "Hi-Score: " + AssetLoader.getHiScore(), 0, 8, width, Align.center, true);
 
             startButton.draw(batch);
+            muteButton.draw(batch);
 
             batch.end();
         }
@@ -80,11 +85,11 @@ public class GameRenderer {
             batch.begin();
             AssetLoader.font.getData().setScale(0.125f);
             AssetLoader.font.setColor(255, 0, 0, 255);
-            AssetLoader.font.draw(batch, "GAME OVER", 0, height/3, width, Align.center, true);
+            AssetLoader.font.draw(batch, "Game Over!", 0, height/3, width, Align.center, true);
 
             AssetLoader.font.getData().setScale(0.0625f);
             AssetLoader.font.setColor(255, 255, 255, 255);
-            AssetLoader.font.draw(batch, "SCORE: " + world.getScore() + "\n HI-SCORE:" + AssetLoader.getHiScore(), 0, 2*height/5, width, Align.center, true);
+            AssetLoader.font.draw(batch, "Score: " + world.getScore() + "\n Hi-Score:" + AssetLoader.getHiScore(), 0, 2*height/5, width, Align.center, true);
 
             mmButton.draw(batch);
             taButton.draw(batch);
@@ -97,9 +102,9 @@ public class GameRenderer {
 
             AssetLoader.font.getData().setScale(0.0625f);
 
-            AssetLoader.font.draw(batch, "FUEL\n" + ship.getFuel() + "%", 0, 8, width-8, Align.right, true);
+            AssetLoader.font.draw(batch, "Fuel\n" + ship.getFuel() + "%", 0, 8, width-8, Align.right, true);
 
-            AssetLoader.font.draw(batch, "SCORE\n" + world.getScore(), 8, 8, width, Align.left, true);
+            AssetLoader.font.draw(batch, "Score\n" + world.getScore(), 8, 8, width, Align.left, true);
             batch.end();
 
 

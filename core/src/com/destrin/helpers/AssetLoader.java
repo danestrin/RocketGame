@@ -2,6 +2,7 @@ package com.destrin.helpers;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Preferences;
+import com.badlogic.gdx.audio.Sound;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -13,10 +14,11 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 public class AssetLoader {
 
     public static Texture texture;
-    public static TextureRegion ship1, ship2, bg, fuel, title, startButtonUp, startButtonDown, taButtonUp, taButtonDown, mmButtonUp, mmButtonDown;
+    public static TextureRegion ship1, ship2, bg, fuel, title, startButtonUp, startButtonDown, taButtonUp, taButtonDown, mmButtonUp, mmButtonDown, soundOn, soundOff;
     public static Animation shipAnimation;
     public static BitmapFont font;
     public static Preferences prefs;
+    public static Sound select, pickup, gameover;
 
     public static void load() {
         texture = new Texture(Gdx.files.internal("data/texture.png"));
@@ -37,6 +39,11 @@ public class AssetLoader {
         mmButtonDown = new TextureRegion(texture, 160, 159, 95, 12);
         mmButtonDown.flip(false, true);
 
+        soundOn = new TextureRegion(texture, 160, 173, 94, 12);
+        soundOn.flip(false, true);
+        soundOff = new TextureRegion(texture, 160, 187, 103, 12);
+        soundOff.flip(false, true);
+
         bg = new TextureRegion(texture, 0, 0, 160, 240);
 
         ship1 = new TextureRegion(texture, 160, 0, 18, 30);
@@ -56,12 +63,16 @@ public class AssetLoader {
         title.flip(false, true);
 
         font = new BitmapFont(Gdx.files.internal("data/font.fnt"), true);
+        font.setUseIntegerPositions(false);
 
         prefs = Gdx.app.getPreferences("Rocket");
 
         if (!prefs.contains("hiScore")) {
             prefs.putInteger("hiScore", 0);
         }
+
+        select = Gdx.audio.newSound(Gdx.files.internal("data/select.wav"));
+        pickup = Gdx.audio.newSound(Gdx.files.internal("data/pickup.wav"));
 
     }
 

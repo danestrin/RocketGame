@@ -155,7 +155,7 @@ public class Ship {
     public void screenwrap(float delta) {
         //screenwrap horizontally
         if (x > Gdx.graphics.getWidth()/2) {
-            x = 0;
+            x = 0 - width;
         }
         if (x < 0 - width) {
             x = Gdx.graphics.getWidth()/2;
@@ -164,7 +164,7 @@ public class Ship {
             y = Gdx.graphics.getHeight()/2;
         }
         if (y > Gdx.graphics.getHeight()/2) {
-            y = 0;
+            y = 0 - height;
         }
     }
 

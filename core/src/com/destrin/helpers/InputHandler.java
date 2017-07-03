@@ -4,6 +4,7 @@ import com.badlogic.gdx.InputProcessor;
 import com.destrin.gameobjects.Ship;
 import com.destrin.gameworld.GameWorld;
 import com.destrin.ui.Button;
+import com.destrin.ui.Toggle;
 
 /**
  * Created by danestrin on 2017-05-24.
@@ -14,6 +15,7 @@ public class InputHandler implements InputProcessor {
     private Ship ship;
 
     private Button startButton, mmButton, taButton;
+    private Toggle muteButton;
 
     private float scaleFactorX, scaleFactorY;
 
@@ -24,6 +26,7 @@ public class InputHandler implements InputProcessor {
         this.startButton = world.getStartButton();
         this.mmButton = world.getMmButton();
         this.taButton = world.getTaButton();
+        this.muteButton = world.getMuteButton();
 
         this.scaleFactorX = scaleX;
         this.scaleFactorY = scaleY;
@@ -109,10 +112,14 @@ public class InputHandler implements InputProcessor {
 
         if (world.isTitle()) {
             if (startButton.isReleased(screenX, screenY)) {
+                if (muteButton.isOn()) {
+                    AssetLoader.select.play();
+                }
                 world.start();
                 return true;
             }
 
+            muteButton.onRelease(screenX, screenY);
         }
 
         if(world.isInGame()) {
@@ -122,9 +129,17 @@ public class InputHandler implements InputProcessor {
 
         if (world.isGameOver()) {
             if (taButton.isReleased(screenX, screenY)) {
+                if (muteButton.isOn()) {
+                    AssetLoader.select.play();
+                }
+
                 world.restart();
             }
             else if (mmButton.isReleased(screenX, screenY)) {
+                if (muteButton.isOn()) {
+                    AssetLoader.select.play();
+                }
+
                 world.returnToTitle();
             }
         }
