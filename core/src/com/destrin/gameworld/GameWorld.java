@@ -16,8 +16,9 @@ public class GameWorld {
     private Ship ship;
     private Fuel fuel;
 
-    private int width;
-    private int height;
+    // Made these public since they're extremely important for scaling purposes across different devices
+    public float width;
+    public float height;
 
     private int score;
     private double score_rate = 0.5;
@@ -32,14 +33,14 @@ public class GameWorld {
         TITLE, INGAME, GAMEOVER
     }
 
-    public GameWorld(int width, int height) {
+    public GameWorld(float width, float height) {
 
         //initialize width/height fields, they'll be needed
         this.width = width;
         this.height = height;
 
         //initialize the ship (player)
-        ship = new Ship(width/2-12, height/2, 18, 30);    //width and height of sprite
+        ship = new Ship(width/2-12, height/2, 18, 30, this);    //width and height of sprite
 
         //create the ship fuel collectible at a random spot
         Random rand = new Random();

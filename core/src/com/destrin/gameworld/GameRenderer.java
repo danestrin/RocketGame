@@ -21,8 +21,8 @@ public class GameRenderer {
     private OrthographicCamera camera;
     private ShapeRenderer shapeRenderer;
 
-    private int width;
-    private int height;
+    private float width;
+    private float height;
 
     private SpriteBatch batch;
 
@@ -32,7 +32,7 @@ public class GameRenderer {
     private Button startButton, mmButton, taButton;
     private Toggle muteButton;
 
-    public GameRenderer(GameWorld world, int width, int height) {
+    public GameRenderer(GameWorld world, float width, float height) {
 
         this.world = world;
         this.width = width;

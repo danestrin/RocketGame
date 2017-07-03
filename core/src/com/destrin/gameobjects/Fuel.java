@@ -16,10 +16,10 @@ public class Fuel {
     private float x;
     private float y;
 
-    private int width;
-    private int height;
+    private float width;
+    private float height;
 
-    private double DECAY_RATE= 0.10;
+    private double DECAY_RATE= 0.25;
     private float START_VALUE = 15;
     private float MIN_VALUE = 5;
     private float capacity;
@@ -31,7 +31,7 @@ public class Fuel {
     CONSTRUCTOR: initializes the Fuel's x, y, width, and height, as well as its capacity and collision polygon.
      */
 
-    public Fuel(int x, int y, int width, int height) {
+    public Fuel(float x, float y, float width, float height) {
 
         this.x = x;
         this.y = y;
@@ -62,11 +62,11 @@ public class Fuel {
         return this.y;
     }
 
-    public int getWidth() {
+    public float getWidth() {
         return this.width;
     }
 
-    public int getHeight() {
+    public float getHeight() {
         return this.height;
     }
 
@@ -105,7 +105,7 @@ public class Fuel {
     capacity is reset to START_VALUE.
      */
 
-    public void resetAfterCollision(int width, int height) {
+    public void resetAfterCollision(float width, float height) {
         Random rand = new Random();
         int randX = (int) (Math.random() * width/2 + 1);
         int randY = (int) (Math.random() * height/2 + 32);  // 32 instead of 1 so that the fuel doesn't spawn behind the score meter

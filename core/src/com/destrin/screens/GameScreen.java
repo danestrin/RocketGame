@@ -14,13 +14,28 @@ public class GameScreen implements Screen {
     private GameWorld world;
     private GameRenderer renderer;
 
+    private float scaleX;
+    private float scaleY;
+
     private float runTime;
 
     public GameScreen() {
         float screenWidth = Gdx.graphics.getWidth();
         float screenHeight = Gdx.graphics.getHeight();
-        int width = Gdx.graphics.getWidth()/2;
-        int height = Gdx.graphics.getHeight()/2;
+
+        /*
+        SCALING: This is very important for the mobile versions of the game.
+                 Since the background sprite was designed at 160 x 240, and everything in the game
+                 is based on that, the screen must be scaled according to that aspect ratio. Therefore,
+                 the screen is divided horizontally by 160 and vertically by 240 to get the value that the
+                 entire game must be scaled by.
+         */
+
+        scaleX = screenWidth/160;
+        scaleY = screenHeight/240;
+
+        float width = Gdx.graphics.getWidth()/scaleX;
+        float height = Gdx.graphics.getHeight()/scaleY;
 
         world = new GameWorld(width, height);
         renderer = new GameRenderer(world, width, height);
@@ -56,7 +71,7 @@ public class GameScreen implements Screen {
      */
     @Override
     public void resize(int width, int height) {
-        
+
     }
 
     /**
@@ -89,5 +104,13 @@ public class GameScreen implements Screen {
     @Override
     public void dispose() {
 
+    }
+
+    public float getScaleX() {
+        return scaleX;
+    }
+
+    public float getScaleY() {
+        return scaleY;
     }
 }

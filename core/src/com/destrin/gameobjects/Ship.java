@@ -1,8 +1,8 @@
 package com.destrin.gameobjects;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.math.Intersector;
 import com.badlogic.gdx.math.Polygon;
+import com.destrin.gameworld.GameWorld;
 
 /**
  * Created by danestrin on 2017-05-24.
@@ -30,6 +30,8 @@ public class Ship {
     private float angle;        //for the sprite's movement
     private boolean isRotating;
 
+    private GameWorld world;
+
     private Polygon boundingPoly;
 
     /**
@@ -40,7 +42,7 @@ public class Ship {
      * @param height
      */
 
-    public Ship(int x, int y, int width, int height) {
+    public Ship(float x, float y, float width, float height, GameWorld world) {
         this.x = x;
         this.y = y;
 
@@ -53,6 +55,8 @@ public class Ship {
         this.height = height;
 
         this.speed = max_speed;
+
+        this.world = world;
 
         this.boundingPoly = new Polygon(new float[]{this.width/2, 0, this.width, this.height-6, 0, this.height-6});
     }
@@ -154,16 +158,16 @@ public class Ship {
      */
     public void screenwrap(float delta) {
         //screenwrap horizontally
-        if (x > Gdx.graphics.getWidth()/2) {
+        if (x > world.width) {
             x = 0 - width;
         }
         if (x < 0 - width) {
-            x = Gdx.graphics.getWidth()/2;
+            x = world.width;
         }
         if (y < 0 - height) {
-            y = Gdx.graphics.getHeight()/2;
+            y = world.height;
         }
-        if (y > Gdx.graphics.getHeight()/2) {
+        if (y > world.height) {
             y = 0 - height;
         }
     }
@@ -221,7 +225,7 @@ public class Ship {
      * @param x
      * @param y
      */
-    public void onRestart(int x, int y) {
+    public void onRestart(float x, float y) {
         this.x = x;
         this.y = y;
 
