@@ -19,7 +19,7 @@ public class Fuel {
     private float width;
     private float height;
 
-    private double DECAY_RATE= 0.25;
+    private double DECAY_RATE= 0.12;
     private float START_VALUE = 15;
     private float MIN_VALUE = 5;
     private float capacity;
