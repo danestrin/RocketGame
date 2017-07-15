@@ -90,13 +90,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Fuel.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Fuel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameobjects/Fuel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+            <state relative-caret-position="145">
+              <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,27 +107,10 @@
       <file leaf-file-name="Ship.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameobjects/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2584">
-              <caret line="170" column="27" lean-forward="false" selection-start-line="170" selection-start-column="27" selection-end-line="170" selection-end-column="27" />
+            <state relative-caret-position="93">
+              <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
               <folding>
-                <element signature="e#2216#2217#0" expanded="false" />
-                <element signature="e#2245#2246#0" expanded="false" />
-                <element signature="e#2272#2273#0" expanded="false" />
-                <element signature="e#2301#2302#0" expanded="false" />
-                <element signature="e#2332#2333#0" expanded="false" />
-                <element signature="e#2365#2366#0" expanded="false" />
-                <element signature="e#2397#2398#0" expanded="false" />
-                <element signature="e#2431#2432#0" expanded="false" />
-                <element signature="e#2465#2466#0" expanded="false" />
-                <element signature="e#2501#2502#0" expanded="false" />
-                <element signature="e#2529#2530#0" expanded="false" />
-                <element signature="e#2561#2562#0" expanded="false" />
-                <element signature="e#2604#2605#0" expanded="false" />
-                <element signature="e#2644#2645#0" expanded="false" />
-                <element signature="e#2741#2742#0" expanded="false" />
-                <element signature="e#2779#2780#0" expanded="false" />
-                <element signature="e#2880#2881#0" expanded="false" />
-                <element signature="e#2919#2920#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,11 +119,10 @@
       <file leaf-file-name="GameRenderer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameworld/GameRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
+            <state relative-caret-position="61">
+              <caret line="98" column="39" lean-forward="false" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
               <folding>
-                <element signature="e#4317#4318#0" expanded="false" />
-                <element signature="e#4351#4352#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,13 +131,9 @@
       <file leaf-file-name="AssetLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/core/src/com/destrin/helpers/AssetLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1037">
+            <state relative-caret-position="140">
               <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3088#3089#0" expanded="false" />
-                <element signature="e#3138#3139#0" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -194,14 +174,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
           <provider editor-type-id="android-manifest">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+            <state relative-caret-position="52">
+              <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -3490,13 +3470,13 @@
         <option value="$PROJECT_DIR$/core/src/com/destrin/helpers/InputHandler.java" />
         <option value="$PROJECT_DIR$/core/src/com/destrin/helpers/AssetLoader.java" />
         <option value="$PROJECT_DIR$/android/src/com/destrin/rocket/AndroidLauncher.java" />
-        <option value="$PROJECT_DIR$/core/src/com/destrin/gameworld/GameRenderer.java" />
-        <option value="$PROJECT_DIR$/core/src/com/destrin/gameobjects/Ship.java" />
-        <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/desktop/src/com/destrin/rocket/desktop/DesktopLauncher.java" />
         <option value="$PROJECT_DIR$/core/src/com/destrin/gameworld/GameWorld.java" />
         <option value="$PROJECT_DIR$/core/src/com/destrin/screens/GameScreen.java" />
+        <option value="$PROJECT_DIR$/core/src/com/destrin/gameobjects/Ship.java" />
+        <option value="$PROJECT_DIR$/core/src/com/destrin/gameworld/GameRenderer.java" />
         <option value="$PROJECT_DIR$/core/src/com/destrin/gameobjects/Fuel.java" />
+        <option value="$PROJECT_DIR$/android/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -3870,7 +3850,7 @@
     <property name="settings.editor.splitter.proportion" value="0.23212537" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CPSC 210/InteliJ/Term Project" />
   </component>
-  <component name="RunManager" selected="Gradle.RocketGame:ios [createIPA]">
+  <component name="RunManager" selected="Application.DesktopLauncher">
     <configuration default="false" name="DesktopLauncher" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -3889,25 +3869,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="desktop" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="RocketGame:desktop [installDebug android:run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/desktop" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="installDebug" />
-            <option value="android:run" />
-          </list>
-        </option>
-        <option name="vmOptions" value="" />
-      </ExternalSystemSettings>
       <method />
     </configuration>
     <configuration default="false" name="RocketGame:android [assembleDebug]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -3958,6 +3919,24 @@
         <option name="taskNames">
           <list>
             <option value="createIPA" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="RocketGame:android [assembleRelease]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/android" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="assembleRelease" />
           </list>
         </option>
         <option name="vmOptions" value="" />
@@ -4164,18 +4143,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Android App.android" />
       <item index="1" class="java.lang.String" itemvalue="Application.DesktopLauncher" />
-      <item index="2" class="java.lang.String" itemvalue="Gradle.RocketGame:desktop [installDebug android:run]" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.RocketGame:android [assembleDebug]" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.RocketGame:desktop [dist]" />
-      <item index="5" class="java.lang.String" itemvalue="Gradle.RocketGame:ios [createIPA]" />
+      <item index="2" class="java.lang.String" itemvalue="Gradle.RocketGame:android [assembleDebug]" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.RocketGame:desktop [dist]" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.RocketGame:ios [createIPA]" />
+      <item index="5" class="java.lang.String" itemvalue="Gradle.RocketGame:android [assembleRelease]" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.RocketGame:ios [createIPA]" />
-        <item index="1" class="java.lang.String" itemvalue="Application.DesktopLauncher" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.RocketGame:desktop [dist]" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.RocketGame:android [assembleDebug]" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.RocketGame:desktop [installDebug android:run]" />
+        <item index="0" class="java.lang.String" itemvalue="Application.DesktopLauncher" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.RocketGame:android [assembleRelease]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.RocketGame:android [assembleDebug]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.RocketGame:desktop [dist]" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.RocketGame:ios [createIPA]" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="TestNG" default="true" selected="false">
@@ -4203,32 +4182,32 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -4289,6 +4268,8 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4298,24 +4279,7 @@
         <state relative-caret-position="2584">
           <caret line="170" column="27" lean-forward="false" selection-start-line="170" selection-start-column="27" selection-end-line="170" selection-end-column="27" />
           <folding>
-            <element signature="e#2216#2217#0" expanded="false" />
-            <element signature="e#2245#2246#0" expanded="false" />
-            <element signature="e#2272#2273#0" expanded="false" />
-            <element signature="e#2301#2302#0" expanded="false" />
-            <element signature="e#2332#2333#0" expanded="false" />
-            <element signature="e#2365#2366#0" expanded="false" />
-            <element signature="e#2397#2398#0" expanded="false" />
-            <element signature="e#2431#2432#0" expanded="false" />
-            <element signature="e#2465#2466#0" expanded="false" />
-            <element signature="e#2501#2502#0" expanded="false" />
-            <element signature="e#2529#2530#0" expanded="false" />
-            <element signature="e#2561#2562#0" expanded="false" />
-            <element signature="e#2604#2605#0" expanded="false" />
-            <element signature="e#2644#2645#0" expanded="false" />
-            <element signature="e#2741#2742#0" expanded="false" />
-            <element signature="e#2779#2780#0" expanded="false" />
-            <element signature="e#2880#2881#0" expanded="false" />
-            <element signature="e#2919#2920#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4325,8 +4289,7 @@
         <state relative-caret-position="697">
           <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
           <folding>
-            <element signature="e#4317#4318#0" expanded="false" />
-            <element signature="e#4351#4352#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4335,11 +4298,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
           <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3088#3089#0" expanded="false" />
-            <element signature="e#3138#3139#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4427,6 +4386,8 @@
           <caret line="22" column="34" lean-forward="false" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4436,24 +4397,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2216#2217#0" expanded="false" />
-            <element signature="e#2245#2246#0" expanded="false" />
-            <element signature="e#2272#2273#0" expanded="false" />
-            <element signature="e#2301#2302#0" expanded="false" />
-            <element signature="e#2332#2333#0" expanded="false" />
-            <element signature="e#2365#2366#0" expanded="false" />
-            <element signature="e#2397#2398#0" expanded="false" />
-            <element signature="e#2431#2432#0" expanded="false" />
-            <element signature="e#2465#2466#0" expanded="false" />
-            <element signature="e#2501#2502#0" expanded="false" />
-            <element signature="e#2529#2530#0" expanded="false" />
-            <element signature="e#2561#2562#0" expanded="false" />
-            <element signature="e#2604#2605#0" expanded="false" />
-            <element signature="e#2644#2645#0" expanded="false" />
-            <element signature="e#2741#2742#0" expanded="false" />
-            <element signature="e#2779#2780#0" expanded="false" />
-            <element signature="e#2880#2881#0" expanded="false" />
-            <element signature="e#2919#2920#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4463,8 +4407,7 @@
         <state relative-caret-position="1224">
           <caret line="81" column="54" lean-forward="true" selection-start-line="81" selection-start-column="54" selection-end-line="81" selection-end-column="54" />
           <folding>
-            <element signature="e#4317#4318#0" expanded="false" />
-            <element signature="e#4351#4352#0" expanded="false" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -4493,11 +4436,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3088#3089#0" expanded="false" />
-            <element signature="e#3138#3139#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4546,18 +4485,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/helpers/AssetLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1037">
-          <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#3088#3089#0" expanded="false" />
-            <element signature="e#3138#3139#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/android/src/com/destrin/rocket/AndroidLauncher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -4583,55 +4510,6 @@
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameworld/GameRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="46" lean-forward="false" selection-start-line="41" selection-start-column="46" selection-end-line="41" selection-end-column="46" />
-          <folding>
-            <element signature="e#4317#4318#0" expanded="false" />
-            <element signature="e#4351#4352#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameobjects/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2584">
-          <caret line="170" column="27" lean-forward="false" selection-start-line="170" selection-start-column="27" selection-end-line="170" selection-end-column="27" />
-          <folding>
-            <element signature="e#2216#2217#0" expanded="false" />
-            <element signature="e#2245#2246#0" expanded="false" />
-            <element signature="e#2272#2273#0" expanded="false" />
-            <element signature="e#2301#2302#0" expanded="false" />
-            <element signature="e#2332#2333#0" expanded="false" />
-            <element signature="e#2365#2366#0" expanded="false" />
-            <element signature="e#2397#2398#0" expanded="false" />
-            <element signature="e#2431#2432#0" expanded="false" />
-            <element signature="e#2465#2466#0" expanded="false" />
-            <element signature="e#2501#2502#0" expanded="false" />
-            <element signature="e#2529#2530#0" expanded="false" />
-            <element signature="e#2561#2562#0" expanded="false" />
-            <element signature="e#2604#2605#0" expanded="false" />
-            <element signature="e#2644#2645#0" expanded="false" />
-            <element signature="e#2741#2742#0" expanded="false" />
-            <element signature="e#2779#2780#0" expanded="false" />
-            <element signature="e#2880#2881#0" expanded="false" />
-            <element signature="e#2919#2920#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4682,19 +4560,61 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameobjects/Fuel.java">
+    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameobjects/Ship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+        <state relative-caret-position="93">
+          <caret line="26" column="33" lean-forward="false" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/helpers/AssetLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="67" column="49" lean-forward="false" selection-start-line="67" selection-start-column="49" selection-end-line="67" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameworld/GameRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="98" column="39" lean-forward="false" selection-start-line="98" selection-start-column="39" selection-end-line="98" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/src/com/destrin/gameobjects/Fuel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="91" column="36" lean-forward="false" selection-start-line="91" selection-start-column="36" selection-end-line="91" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/android/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="4" column="31" lean-forward="true" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="gradleExecuteTaskHistory">
-    <option value="$PROJECT_DIR$/ios" />
+    <option value="$PROJECT_DIR$/android" />
+    <option value="assembleRelease" />
     <option value="createIPA" />
     <option value="dist" />
     <option value="installDebug android:run" />

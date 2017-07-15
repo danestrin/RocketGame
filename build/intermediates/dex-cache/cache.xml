@@ -2,11 +2,32 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\danestrin\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-backend-android\1.9.2\342b830bc718dc1965c8f13fc58dc500e8bd262f\gdx-backend-android-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="342b830bc718dc1965c8f13fc58dc500e8bd262f">
+        <dex dex="C:\Users\danestrin\Documents\GitHub\RocketGame\android\build\intermediates\pre-dexed\release\gdx-backend-android-1.9.2_a47a5fedf1b5e8550c182de3d74268e2986b095d.jar" />
+    </item>
+    <item
+        jar="C:\Users\danestrin\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx-box2d\1.9.2\b78eaa90aaaf7830e6dffff587ea6e859c2787b2\gdx-box2d-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b78eaa90aaaf7830e6dffff587ea6e859c2787b2">
+        <dex dex="C:\Users\danestrin\Documents\GitHub\RocketGame\android\build\intermediates\pre-dexed\release\gdx-box2d-1.9.2_e804bf013ffc84546b0197b9fa05018526be9718.jar" />
+    </item>
+    <item
         jar="C:\Users\danestrin\Documents\GitHub\RocketGame\core\build\libs\core-1.0.jar"
         jumboMode="false"
         revision="23.0.1"
-        sha1="34eaf6f6cb1057f6f8a149a75cbe201abbbd1d5c">
-        <dex dex="C:\Users\danestrin\Documents\GitHub\RocketGame\android\build\intermediates\pre-dexed\debug\core-1.0_538291990efcf4c773d048c846dbab5f943efdaa.jar" />
+        sha1="6e7e68b1e79f58e00c5cb2a1cc0d303d0e7b0117">
+        <dex dex="C:\Users\danestrin\Documents\GitHub\RocketGame\android\build\intermediates\pre-dexed\release\core-1.0_538291990efcf4c773d048c846dbab5f943efdaa.jar" />
+    </item>
+    <item
+        jar="C:\Users\danestrin\.gradle\caches\modules-2\files-2.1\com.badlogicgames.gdx\gdx\1.9.2\e641cb91bec06bc64d9ddf7a7d7062caceec73cd\gdx-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e641cb91bec06bc64d9ddf7a7d7062caceec73cd">
+        <dex dex="C:\Users\danestrin\Documents\GitHub\RocketGame\android\build\intermediates\pre-dexed\release\gdx-1.9.2_7a807cbcaaffce9b5690216862d6fc177ef86a85.jar" />
     </item>
 
 </items>

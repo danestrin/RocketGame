@@ -72,7 +72,7 @@ public class GameRenderer {
             batch.draw(AssetLoader.title, width/2-190/4, height/5, 190/2, 49/2);
 
             AssetLoader.font.getData().setScale(0.0625f);
-            AssetLoader.font.draw(batch, "Hold the screen to steer the ship!  \n Collect fuel before you run out!", 8, height/3, width-8, Align.center, true);
+            AssetLoader.font.draw(batch, "Hold the screen to steer the ship!\nCollect fuel before you run out!", 8, height/3, width-8, Align.center, true);
             AssetLoader.font.draw(batch, "2017 Dan Estrin", 0, height-8, width, Align.center, true);
             AssetLoader.font.draw(batch, "Hi-Score: " + AssetLoader.getHiScore(), 0, 8, width, Align.center, true);
 
@@ -85,29 +85,29 @@ public class GameRenderer {
             batch.begin();
             AssetLoader.font.getData().setScale(0.125f);
             AssetLoader.font.setColor(255, 0, 0, 255);
-            AssetLoader.font.draw(batch, "Game Over!", 0, height/3, width, Align.center, true);
+            AssetLoader.font.draw(batch, "GAME OVER", 0, height/3, width, Align.center, true);
 
             AssetLoader.font.getData().setScale(0.0625f);
             AssetLoader.font.setColor(255, 255, 255, 255);
-            AssetLoader.font.draw(batch, "Score: " + world.getScore() + "\n Hi-Score:" + AssetLoader.getHiScore(), 0, 2*height/5, width, Align.center, true);
+            AssetLoader.font.draw(batch, "You ran out of fuel!\n\nScore: " + world.getScore() + "\nHi-Score:" + AssetLoader.getHiScore(), 0, 2*height/5, width, Align.center, true);
 
             mmButton.draw(batch);
             taButton.draw(batch);
             batch.end();
         } else if (world.isInGame()) {
             batch.begin();
+            batch.setColor(1, 1, 1, 1);
             batch.draw(AssetLoader.bg, 0, 0);
             batch.draw(AssetLoader.shipAnimation.getKeyFrame(runTime), ship.getX(), ship.getY(), ship.getWidth() / 2, ship.getHeight() / 2, ship.getWidth(), ship.getHeight(), 1, 1, ship.getRotation());
+
+            batch.setColor(1, 1, 1, fuel.getAlpha());
             batch.draw(AssetLoader.fuel, fuel.getX(), fuel.getY(), fuel.getWidth() / 2, fuel.getHeight() / 2, fuel.getWidth(), fuel.getHeight(), 1, 1, 0);
 
+            batch.setColor(1, 1, 1, 1);
             AssetLoader.font.getData().setScale(0.0625f);
-
             AssetLoader.font.draw(batch, "Fuel\n" + ship.getFuel() + "%", 0, 8, width-8, Align.right, true);
-
             AssetLoader.font.draw(batch, "Score\n" + world.getScore(), 8, 8, width, Align.left, true);
             batch.end();
-
-
 
         // Debug purposes, draws out the borders of collision
         /*
@@ -118,9 +118,5 @@ public class GameRenderer {
         */
 
         }
-    }
-
-    public OrthographicCamera getCamera() {
-        return this.camera;
     }
 }

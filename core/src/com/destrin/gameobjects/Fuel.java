@@ -19,9 +19,10 @@ public class Fuel {
     private float width;
     private float height;
 
+    private float alpha;
     private double DECAY_RATE= 0.12;
     private float START_VALUE = 15;
-    private float MIN_VALUE = 5;
+    private float MIN_VALUE = 7;
     private float capacity;
     private float timer;
 
@@ -40,6 +41,8 @@ public class Fuel {
         this.height = height;
 
         this.capacity = START_VALUE;
+
+        alpha = 1;
 
         boundingPoly = new Polygon(new float[]{0, 0, this.width, 0, this.width, this.height, 0, this.height});
     }
@@ -74,12 +77,17 @@ public class Fuel {
         return this.capacity;
     }
 
+    public float getAlpha() {
+        return this.alpha;
+    }
+
     public Polygon getBoundingPolygon() {
         return this.boundingPoly;
     }
 
     /*
-    DECAY: The capacity of the fuel decays by 1 based on DECAY_RATE, until it reaches MIN_VALUE.
+    DECAY: The capacity of the fuel decays by 1 based on DECAY_RATE, until it reaches MIN_VALUE. The TextureRegion gets
+           more transparent as its capacity decreases.
      */
     public void decay(float delta) {
 
@@ -87,6 +95,7 @@ public class Fuel {
 
         if (capacity > MIN_VALUE && timer >= DECAY_RATE) {
             capacity -= 1;
+            alpha -= 0.0625;
 
             timer -= DECAY_RATE;
         }
@@ -113,6 +122,7 @@ public class Fuel {
         x = randX;
         y = randY;
         capacity = START_VALUE;
+        alpha = 1;
 
         timer = 0;
     }
