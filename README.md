@@ -1,6 +1,6 @@
 # Rocket
 
-A mobile/HTML5 game built using Libgdx created by Dan Estrin
+An Android game built using Libgdx, created by Dan Estrin
 
 # Acknowledgements
 
