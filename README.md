@@ -18,10 +18,8 @@ by the amount of time the ship stays flying before it runs out of fuel.
 
 The libgdx project contains modules for Desktop, Android, iOS, and HTML5. The game is currently intended to be shipped for HTML5, and only the Desktop and Android versions have been compiled and tested.
 
-# Development/TODO
+# RELEASE!
 
-- HTML5 project needs to be compiled, tested, and the screen resolution needs to be decided
-- iOS project needs to be compiled and tested
-- Android app-related stuff needs to be finished (icons, permissions, signing, etc) as well as Google Play Service implementation (only if it's actually gonna be shipped)
-- More playtesting!
+https://play.google.com/store/apps/details?id=com.destrin.rocket&hl=en
 
+The game is now released on Android! You can download it here.
